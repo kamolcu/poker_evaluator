@@ -20,7 +20,9 @@ python ./poker-evaluator.py 2S,3H,4D,5C,6S
 python ./poker-evaluator.py 10S,AH,QD,KC,JD
 python ./poker-evaluator.py KS,KH,KD,KC,JD
 python ./poker-evaluator.py 5S,6S,3S,4S,2S
+python ./poker-evaluator.py AH,6H,9H,8H,10H
 python ./poker-evaluator.py AS,QS,KS,JS,10S
+python ./poker-evaluator.py 7C,6C,9C,8C,10C
 python ./poker-evaluator.py AD,QD,KD,JD,10D
 python ./poker-evaluator.py 2D,2S,4D,5D,6D
 

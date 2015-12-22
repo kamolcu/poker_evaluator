@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import sys
 import argparse
 from sets import Set
@@ -60,11 +61,14 @@ def normalize(rank):
 def format_rank(rank):
     list = {'>': 'A', '=': 'K', '<': 'Q', ';': 'J', ':': '10'}
     for key in list.keys():
-        if key == rank:
+        if key == rank[0]:
             rank = re.sub(key, list[key], rank)
             break
     return rank
 
+def format_suit(suit):
+    list = {'S': '♠', 'H': '♥', 'D': '♦', 'C': '♣'}
+    return list[suit]
 
 def make_output(suit_set, sorted_ranks_list, ranks_set, sorted_rank_suit_list):
     flush = False
@@ -73,7 +77,7 @@ def make_output(suit_set, sorted_ranks_list, ranks_set, sorted_rank_suit_list):
     flush_suit = next(iter(suit_set))
     if (is_flush(suit_set)):
         flush = True
-        output = 'Flush of ' + flush_suit
+        output = 'Flush of ' + format_suit(flush_suit)
     (straight, royal) = is_straight(sorted_ranks_list, ranks_set)
     if (flush and straight):
         output = 'Straight ' + output + ' (' + format_rank(sorted_ranks_list[
@@ -111,7 +115,7 @@ def make_output(suit_set, sorted_ranks_list, ranks_set, sorted_rank_suit_list):
 parser = argparse.ArgumentParser(description='Poker evaluator script')
 parser.add_argument(
     'cards',
-    help='Input of 5 cards on hand to be evaluated, separate by comma e.g. AS,4H,10D,8C,KD')
+    help='Input of 5 cards on hand to be evaluated, separate by comma e.g. AS,4H,10D,8C,KD (S = SPADES, H = HEARTS, D = DIAMONDS, C = CLUBS)')
 args = parser.parse_args()
 
 inputs = str.split(args.cards, ',')
