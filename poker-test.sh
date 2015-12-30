@@ -7,10 +7,11 @@ python ./poker-evaluator.py dfhaks
 python ./poker-evaluator.py AD,4H,10D,8C,KX
 python ./poker-evaluator.py AS,4H,10D,8Z,KD
 python ./poker-evaluator.py AS,4H,10D,8D,8D
+python ./poker-evaluator.py QS,QS,QS,QS,QS
 python ./poker-evaluator.py 10S,FH,10D,8D,8C
 
 python ./poker-evaluator.py AS,4H,10D,8C,KD
-python ./poker-evaluator.py AS,4H,10D,8C,KD
+python ./poker-evaluator.py KS,4H,10D,8C,KD
 python ./poker-evaluator.py 4S,4H,10D,6C,2S
 python ./poker-evaluator.py 9S,9H,10D,6C,6S
 python ./poker-evaluator.py AS,AH,AD,6C,2S
@@ -25,7 +26,7 @@ python ./poker-evaluator.py AS,QS,KS,JS,10S
 python ./poker-evaluator.py 7C,6C,9C,8C,10C
 python ./poker-evaluator.py AD,QD,KD,JD,10D
 python ./poker-evaluator.py 2D,2S,4D,5D,6D
-
+python ./poker-evaluator.py 9D,10C,JD,KS,QS
 
 # AS,4H,10D,8C,KD --> AS - High Card
 # 4S,4H,10D,6C,2S --> 1 Pair of 4

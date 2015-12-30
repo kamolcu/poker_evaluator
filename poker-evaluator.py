@@ -82,7 +82,7 @@ def make_output(suit_set, sorted_ranks_list, ranks_set, sorted_rank_suit_list):
     if (flush and straight):
         output = 'Straight ' + output + ' (' + format_rank(sorted_ranks_list[
             0]) + ' to ' + format_rank(sorted_ranks_list[-1]) + ')'
-        if (royal and flush_suit == 'S'):
+        if (royal):
             output = 'Royal ' + output
         return output
     elif (straight):
